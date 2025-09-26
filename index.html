@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduConnect Nabha - Digital Learning Platform</title>
+    <meta name="description" content="Digital learning platform for rural schools - Offline-first education with Punjabi & Hindi content" />
+    <meta name="author" content="EduConnect Nabha Team" />
+
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="rural education, digital learning, Punjab, Nabha, offline learning, Punjabi education" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://educonnect-nabha.lovable.app" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="EduConnect Nabha - Digital Learning Platform" />
+    <meta property="og:description" content="Transforming rural education through innovative technology and culturally relevant digital learning experiences" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta property="og:url" content="https://educonnect-nabha.lovable.app" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@educonnect_nabha" />
+    <meta name="twitter:title" content="EduConnect Nabha - Digital Learning Platform" />
+    <meta name="twitter:description" content="Digital learning platform for rural schools - Offline-first education" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#3b82f6" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="EduConnect" />
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Fonts: modern and clear -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/placeholder.svg" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- PWA Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('EduConnect SW registered: ', registration);
+            })
+            .catch((registrationError) => {
+              console.log('EduConnect SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
